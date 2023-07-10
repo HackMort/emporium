@@ -12,7 +12,7 @@ banner:
 # Features
 features:
   - title: "Built for Comfort and Style"
-    image: "/images/service-1.png"
+    image: "/images/custom-shoes.png"
     content: "Our shoes are designed to provide maximum comfort and support. The materials used are of the highest quality, ensuring durability and longevity. The stylish designs are sure to turn heads wherever you go!"
     bulletpoints:
       - "High-quality materials"
