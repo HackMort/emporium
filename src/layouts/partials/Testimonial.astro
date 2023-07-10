@@ -24,7 +24,7 @@ const { testimonial } = Astro.props;
                     designation: string;
                   }) => (
                     <div class="swiper-slide">
-                      <div class="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
+                      <div class="h-full rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
                         <div class="text-dark dark:text-white">
                           <svg
                             width="33"
@@ -78,6 +78,13 @@ const { testimonial } = Astro.props;
   )
 }
 
+
+<style>
+   .swiper-slide {
+     height: auto;
+    }
+</style>
+
 <script>
 import { Swiper } from "swiper";
 import "swiper/css";
@@ -90,8 +97,9 @@ import { Autoplay, Pagination } from "swiper/modules";
     loop: true,
     loopedSlides: 2,
     centeredSlides: true,
+    autoHeight: true,
     autoplay: {
-      delay: 2500,
+      delay: 4000,
       disableOnInteraction: false,
     },
     pagination: {

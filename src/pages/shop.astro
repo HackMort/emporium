@@ -1,0 +1,50 @@
+---
+import Base from "@/layouts/Base.astro";
+import { markdownify } from "@/lib/utils/textConverter";
+import CallToAction from "@/partials/CallToAction.astro";
+import PageHeader from "@/partials/PageHeader.astro";
+import type { Button, Feature } from "@/types";
+import { Image } from "@astrojs/image/components";
+import { getEntryBySlug } from "astro:content";
+
+type Props = {
+
+}
+const {} = Astro.props
+const call_to_action = await getEntryBySlug("sections", "call-to-action");
+
+---
+<Base>
+  <div class="bg-theme-light dark:bg-darkmode-theme-light py-20 mb-10">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 text-center">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover the Perfect Shoes</h1>
+          <p class="text-lg md:text-xl mb-6">Step out in style with our latest collection.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <div class="p-4">
+        <img src="/images/shoe-a.png" alt="Shoe A" class="w-full mb-2">
+        <h3 class="text-lg font-semibold">Shoe A</h3>
+        <p class="text-gray-600">$99.99</p>
+      </div>
+      <div class="p-4">
+        <img src="/images/shoe-b.png" alt="Shoe B" class="w-full mb-2">
+        <h3 class="text-lg font-semibold">Shoe B</h3>
+        <p class="text-gray-600">$79.99</p>
+      </div>
+      <div class="p-4">
+        <img src="/images/shoe-c.png" alt="Shoe C" class="w-full mb-2">
+        <h3 class="text-lg font-semibold">Shoe C</h3>
+        <p class="text-gray-600">$119.99</p>
+      </div>
+      <!-- Add more shoe items here -->
+    </div>
+  </div>
+
+  <CallToAction call_to_action={call_to_action}/>
+</Base>
+

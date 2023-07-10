@@ -21,11 +21,14 @@ const { title, image, social } = data.data;
       />
     )
   }
-  <h4 class="mb-3">
+  <!-- <h4 class="mb-3">
     <a href={`/authors/${data.slug}`}>{title}</a>
+  </h4> -->
+  <h4 class="mb-3">
+{title}
   </h4>
-  <p class="mb-4">
+  <!-- <p class="mb-4">
     {plainify(data.body?.slice(0, 100))}
-  </p>
-  <Social source={social} className="social-icons" />
+  </p> -->
+  <!-- <Social source={social} className="social-icons" /> -->
 </div>

@@ -2,11 +2,16 @@
 import { Image } from "@astrojs/image/components";
 import Base from "@/layouts/Base.astro";
 import { markdownify } from "@/lib/utils/textConverter";
+import { getSinglePage } from "@/lib/contentParser.astro";
 import { getEntryBySlug } from "astro:content";
+import PageHeader from "@/partials/PageHeader.astro";
+import AuthorCard from "@/components/AuthorCard.astro";
+
 
 const entry = await getEntryBySlug("pages", "about");
 const { Content } = await entry.render();
 const { title, description, meta_title, image } = entry.data;
+const authors = await getSinglePage("authors");
 ---
 
 <Base
@@ -15,6 +20,7 @@ const { title, description, meta_title, image } = entry.data;
   description={description}
   image={image}
 >
+<PageHeader title="About Us" />
   <section class="section-sm">
     <div class="container">
       <div class="row justify-center">
@@ -30,11 +36,25 @@ const { title, description, meta_title, image } = entry.data;
               />
             )
           }
-          <h2 set:html={markdownify(title)} class="h3 mb-6" />
+          <h2 set:html={markdownify(title)} class="h2 mb-6" />
           <div class="content">
             <Content />
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-sm pb-0">
+    <div class="container">
+      <h3 class="h3 mb-6 text-center">Our Team</h3>
+      <div class="row justify-center">
+        {
+          authors.map((author) => (
+            <div class="mb-14 md:col-6 lg:col-4">
+              <AuthorCard data={author} />
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>
