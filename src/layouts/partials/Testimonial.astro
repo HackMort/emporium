@@ -9,7 +9,7 @@ const { testimonial } = Astro.props;
     <section class="section">
       <div class="container">
         <div class="row">
-          <div class="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
+          <div class="mx-auto mb-12 text-center md:col-10 lg:col-9 xl:col-7">
             <h2 set:html={markdownify(testimonial.data.title)} class="mb-4" />
             <p set:html={markdownify(testimonial.data.description)} />
           </div>
