@@ -1,7 +1,7 @@
 ---
-title: "EmporiumDEQ"
+title: "Emporium DEQ"
 meta_title: "About Us"
-description: "About EmporiumDEQ and the people behind it."
+description: "About Emporium DEQ and the people behind it."
 # image: "/images/avatar.png"
 draft: false
 ---

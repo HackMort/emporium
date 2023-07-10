@@ -1,6 +1,6 @@
 ---
-title: Roberto J.
-email: roberj@email.com
+title: Ariel Hidaldog
+email: ariel@email.com
 image: "/images/avatar.png"
 description: this is meta description
 social:

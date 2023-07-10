@@ -1,5 +1,5 @@
 ---
-title: Paola Juarez
+title: Paola Juárez
 email: pao@email.com
 image: "/images/avatar.png"
 description: this is meta description
