@@ -1,10 +1,10 @@
 {
   "site": {
-    "title": "EmporiumDEQ",
-    "base_url": "https://astroplate.netlify.app",
+    "title": "Emporium DEQ",
+    "base_url": "https://emporium-deq.netlify.app/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
+    "favicon": "/images/favicon.ico",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo.png",
     "logo_width": "150",
